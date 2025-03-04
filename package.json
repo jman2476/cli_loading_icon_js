@@ -1,0 +1,21 @@
+{
+  "name": "cli_loading_icon_js",
+  "version": "1.0.0",
+  "description": "So you can make a little spinny guy while your program loads or does something",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jman2476/cli_loading_icon_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jman2476/cli_loading_icon_js/issues"
+  },
+  "homepage": "https://github.com/jman2476/cli_loading_icon_js#readme"
+}
