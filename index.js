@@ -1,4 +1,4 @@
-import { line_spin, dots, circle_expand, spin_waves} from './assets/animations.js'
+import { line_spin, dots, circle_expand, xBox} from './assets/animations.js'
 import {stdout} from 'node:process' 
 
 // 1 line animation function
@@ -28,7 +28,7 @@ function loadSquareAnim2(animArr) {
     return timerId
 }
 // Example: Run loading animation for 3 seconds
-//      const animSqr = loadSquareAnim2(spin_waves)
+//      const animSqr = loadSquareAnim2(xBox)
 //      setTimeout(clearInterval, 3000, animSqr)
 
 export {
