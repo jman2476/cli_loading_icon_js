@@ -15,7 +15,7 @@ function loadAnimation(animArr) {
 //      const animID = loadAnimation(dots)
 //      setTimeout(clearInterval, 3000, animID)
 
-// TODO: write non IIFE version of 2x2 animation function
+// 2x2 animation function
 function loadSquareAnim2(animArr) {
     let index = 0
     const cycler = animArr.length - 1
