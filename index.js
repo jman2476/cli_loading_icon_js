@@ -1,5 +1,5 @@
 import { line_spin, dots, circle_expand} from './assets/animations.js'
-// import process from 'node:process' 
+import {stdout} from 'node:process' 
 
 function animate(arr) {
     console.time()
@@ -26,23 +26,14 @@ function animate(arr) {
 //     }, 250);
 //   })();
 
-const understandingBitwise = (function() {
-    try {for (let i = 0; i < 16; i++){
-        // for (let j = 0; j < 5; j++){
-            let k = i&15;
-            process.stdout.write(`${i} ${k}` + '\n')
-            process.stdout.write('---\n')
-        // }
-    }} catch(err) {
-        console.log(err)
-        process.stderr.write(err + '\n')
-    }
-})
+const timer = (function(array) {
+    let x = 0
+    const cycle = array.length - 1
+    const timerId = setInterval(function() {
+        stdout.write('\r' + array[x++])
+        x &= cycle
+    }, 250)
+    return timerId
+})(line_spin)
 
-console.time('clog')
-console.log('Helloweruldo')
-console.timeEnd('clog')
-
-console.time('stdout')
-process.stdout.write('Helloweruldo\n')
-console.timeEnd('stdout')
+setTimeout(clearInterval, 2000, timer)
