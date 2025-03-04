@@ -9,6 +9,6 @@ So you can make a little spinny guy while your program loads or does something
 - Have options for type of loading icon on the CLI
 
 ## TODOs
-- Create animation frames for 3 styles of loading icon
-- research how to rewrite a line of the console
+- DONE Create animation frames for 3 styles of loading icon
+- DONE research how to rewrite a line of the console
 - research how to trigger the start/stop via event listeners
