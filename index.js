@@ -1,4 +1,4 @@
-import { line_spin, dots, circle_expand} from './assets/animations.js'
+import { line_spin, dots, circle_expand, spin_waves} from './assets/animations.js'
 import {stdout} from 'node:process' 
 
 function animate(arr) {
@@ -26,14 +26,44 @@ function animate(arr) {
 //     }, 250);
 //   })();
 
-const timer = (function(array) {
-    let x = 0
-    const cycle = array.length - 1
-    const timerId = setInterval(function() {
-        stdout.write('\r' + array[x++])
-        x &= cycle
+// 1x1 animation
+// const timer = (function(array) {
+//     let x = 0
+//     const cycle = array.length - 1
+//     const timerId = setInterval(function() {
+//         stdout.write('\r' + array[x++])
+//         x &= cycle
+//     }, 250)
+//     return timerId
+// })(circle_expand)
+
+// setTimeout(clearInterval, 2000, timer)
+
+
+// 2x2 animation
+// const twoBy2 = (function(array2By) {
+//     let x = 0
+//     const cycle = array2By.length - 1
+//     const timerId = setInterval(function() {
+//         stdout.write(array2By[x++])
+//         stdout.moveCursor(-2,-1)
+//         x &= cycle
+//     }, 250)
+//     return timerId
+// })(spin_waves)
+
+// setTimeout(clearInterval, 2000, twoBy2)
+
+// TODO: write non IIFE version of 1 line animation function
+function waitingAnimation(animArr) {
+    let index = 0;
+    const cycler = animArr.length - 1
+    const timerId = setInterval(() => {
+        stdout.write('\r' + animArr[index++])
+        index &= cycler
     }, 250)
     return timerId
-})(line_spin)
+}
 
-setTimeout(clearInterval, 2000, timer)
+const animID = waitingAnimation(dots)
+setTimeout(clearInterval, 3000, animID)
