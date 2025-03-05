@@ -1,6 +1,9 @@
-import { line_spin, dots, circle_expand, xBox} from './src/frames.js'
-import {stdout} from 'node:process' 
+import {frames, functions} from './src'
 
+export {
+    frames,
+    functions
+}
 
 
 

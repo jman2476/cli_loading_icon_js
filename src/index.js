@@ -1,2 +1,2 @@
-export {default as frames} from './frames.js'
-export {default as funcs} from './functions.js'
+export * as frames from './frames.js'
+export * as functions from './functions.js'
