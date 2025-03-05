@@ -1,4 +1,4 @@
-import {frames, functions} from './src'
+import {frames, functions} from './src/index.js'
 
 export {
     frames,

@@ -1,13 +1,12 @@
-import { 
-    frames, functions} from './src/'
+import { frames, functions } from './index.js'
 import child_process from 'node:child_process'
 
 const sleeper = child_process.spawn('sleep', [10])
-const animID = functions.loadFourSqr(frames.runX)
+const animID = functions.loadAnimation(frames.rocketShip)
 
 sleeper.stdout.on('close', () => {
     clearInterval(animID)
-    process.stdout.write('\nProcess complete')
+    process.stdout.write('\r8=====D~~')
 })
 
 
